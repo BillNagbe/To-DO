@@ -19,4 +19,11 @@ function addTask() {
     input.value = " ";
 }
 
-addTask();
+
+function saveDate() {
+    localStorage.setItem("data", taskList.innerHTML);
+}
+
+function showTask() {
+    localStorage.innerHTML = localStorage.getItem("data");
+}
